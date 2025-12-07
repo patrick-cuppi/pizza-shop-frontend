@@ -2,6 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import "./index.css";
 import { router } from "./routes";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Toaster } from "sonner";
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
       <Helmet
         titleTemplate="%s | Pizza Shop"
       />
+      <Toaster position="top-right" richColors closeButton />
       <RouterProvider router={router} />
     </HelmetProvider>
   );

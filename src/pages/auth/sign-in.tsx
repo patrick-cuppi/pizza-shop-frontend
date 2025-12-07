@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import z from "zod";
 
 const signInFormSchema = z.object({
@@ -19,6 +20,13 @@ export function SignIn() {
     await new Promise((resolve) => setTimeout(resolve, 2000));
     
     console.log(data);
+
+    toast.success("E-mail enviado com sucesso! Verifique sua caixa de entrada.", {
+      action: {
+        label: "Reenviar",
+        onClick: () => handleSignIn(data),
+      }
+    });
   }
 
   return (
