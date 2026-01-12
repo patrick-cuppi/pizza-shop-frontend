@@ -1,8 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ArrowRight, Search, X } from "lucide-react";
+import { Table, TableBody, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Helmet } from "react-helmet-async";
+import { OrderTableFilter } from "./order-table-filter";
+import { OrderTableRow } from "./order-table-row";
 
 export function OrdersPage() {
   return (
@@ -12,10 +11,7 @@ export function OrdersPage() {
         <h1 className="text-3xl font-bold tracking-tight">Pedidos</h1>
       </div>
       <div className="space-y-2.5">
-        <form className="flex items-center gap-2">
-          <span className="text-sm font-semibold">Filtros:</span>
-          <Input placeholder="Nome do cliente" className="h-8 w-[320px]" />
-        </form>
+        <OrderTableFilter />
 
         <div className="border rounded-md">
           <Table>
@@ -34,40 +30,7 @@ export function OrdersPage() {
             <TableBody>
               {Array.from({ length:15 }).map((_, index) => {
                 return (
-                  <TableRow key={index}>
-                    <TableCell>
-                      <Button variant="outline" size="xs">
-                        <Search className="h-3 w-3" />
-                        <span className="sr-only">Detalhes do Pedido</span>
-                      </Button>
-                    </TableCell>
-                    <TableCell className="font-mono text-xs font-medium">
-                      1we891f8w91f98f19w8f
-                    </TableCell>
-                    <TableCell className="text-muted-foreground">
-                      há 15 minutos
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center gap-2">
-                        <span className="h-2 w-4 rounded-full bg-slate-400" />
-                        <span className="font-medium text-muted-foreground">Pendente</span>
-                      </div>
-                    </TableCell>
-                    <TableCell className="font-medium">John Doe</TableCell>
-                    <TableCell className="font-medium">R$ 98,00</TableCell>
-                    <TableCell>
-                      <Button variant="outline" size="xs">
-                        <ArrowRight className="h-3 w-3 mr-2" />
-                        Aprovar
-                      </Button>
-                    </TableCell>
-                    <TableCell>
-                      <Button variant="ghost" size="xs">
-                        <X className="h-3 w-3 mr-2" />
-                        Cancelar
-                      </Button>
-                    </TableCell>
-                  </TableRow>
+                  <OrderTableRow key={index} />
                 )
               })}
             </TableBody>
