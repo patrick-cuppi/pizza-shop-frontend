@@ -2,6 +2,7 @@ import { getMonthCanceledOrdersAmount } from "@/api/get-month-canceled-orders-am
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
 import { TicketX } from "lucide-react";
+import { MetricCardSkeleton } from "./metric-card-skeleton";
 
 export function MonthCanceledOrdersAmountCard() {
   const { data: monthCanceledOrdersAmount } = useQuery({
@@ -22,27 +23,30 @@ export function MonthCanceledOrdersAmountCard() {
           {monthCanceledOrdersAmount?.amount.toLocaleString("pt-BR")}
         </span>
         <p className="text-xs text-muted-foreground">
-          {monthCanceledOrdersAmount &&
-          monthCanceledOrdersAmount.diffFromLastMonth >= 0 ? (
-            <>
-              <span className="text-rose-500 dark:text-rose-400">
-                +
-                {monthCanceledOrdersAmount?.diffFromLastMonth.toLocaleString(
-                  "pt-BR",
-                )}
-                %
-              </span>
-            </>
+          {monthCanceledOrdersAmount ? (
+            monthCanceledOrdersAmount.diffFromLastMonth >= 0 ? (
+              <>
+                <span className="text-rose-500 dark:text-rose-400">
+                  +
+                  {monthCanceledOrdersAmount?.diffFromLastMonth.toLocaleString(
+                    "pt-BR",
+                  )}
+                  %
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="text-emerald-500 dark:text-emerald-400">
+                  {monthCanceledOrdersAmount?.diffFromLastMonth.toLocaleString(
+                    "pt-BR",
+                  )}
+                  %
+                </span>
+              </>
+            )
           ) : (
-            <>
-              <span className="text-emerald-500 dark:text-emerald-400">
-                {monthCanceledOrdersAmount?.diffFromLastMonth.toLocaleString(
-                  "pt-BR",
-                )}
-                %
-              </span>
-            </>
-          )}{" "}
+            <MetricCardSkeleton />
+          )}
           em relação ao último mês
         </p>
       </CardContent>
