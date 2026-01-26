@@ -5,6 +5,10 @@ import { Pagination } from "./pagination";
 const onPageChangeCallback = vi.fn(); // Spie function
 
 describe("Pagination", () => {
+  beforeEach(() => {
+    onPageChangeCallback.mockClear();
+  });
+
   it("should display the right amount of pages and results", () => {
     const wrapper = render(
       <Pagination
@@ -37,5 +41,69 @@ describe("Pagination", () => {
 
     expect(onPageChangeCallback).toHaveBeenCalled();
     expect(onPageChangeCallback).toHaveBeenCalledWith(1);
+  });
+
+  it("should be able to navigate to the previous page", async () => {
+    const user = userEvent.setup();
+
+    const wrapper = render(
+      <Pagination
+        pageIndex={5}
+        perPage={10}
+        totalCount={200}
+        onPageChange={onPageChangeCallback}
+      />,
+    );
+
+    const previousButton = wrapper.getByRole("button", {
+      name: "Página anterior",
+    });
+
+    await user.click(previousButton);
+
+    expect(onPageChangeCallback).toHaveBeenCalled();
+    expect(onPageChangeCallback).toHaveBeenCalledWith(4);
+  });
+
+  it("should be able to navigate to the first page", async () => {
+    const user = userEvent.setup();
+
+    const wrapper = render(
+      <Pagination
+        pageIndex={5}
+        perPage={10}
+        totalCount={200}
+        onPageChange={onPageChangeCallback}
+      />,
+    );
+
+    const firstPageButton = wrapper.getByRole("button", {
+      name: "Primeira página",
+    });
+
+    await user.click(firstPageButton);
+    expect(onPageChangeCallback).toHaveBeenCalled();
+    expect(onPageChangeCallback).toHaveBeenCalledWith(0);
+  });
+
+  it("should be able to navigate to the last page", async () => {
+    const user = userEvent.setup();
+
+    const wrapper = render(
+      <Pagination
+        pageIndex={0}
+        perPage={10}
+        totalCount={200}
+        onPageChange={onPageChangeCallback}
+      />,
+    );
+
+    const lastPageButton = wrapper.getByRole("button", {
+      name: "Última página",
+    });
+
+    await user.click(lastPageButton);
+    expect(onPageChangeCallback).toHaveBeenCalled();
+    expect(onPageChangeCallback).toHaveBeenCalledWith(19);
   });
 });
