@@ -18,9 +18,7 @@ test("sign up successfully", async ({ page }) => {
     "Restaurante cadastrado com sucesso! Verifique sua caixa de entrada.",
   );
 
-  expect(toast).toBeVisible();
-
-  await page.waitForTimeout(2000);
+  await expect(toast).toBeVisible();
 });
 
 test("sign up with error", async ({ page }) => {
@@ -41,9 +39,7 @@ test("sign up with error", async ({ page }) => {
     "Ocorreu um erro ao cadastrar o restaurante. Tente novamente.",
   );
 
-  expect(toast).toBeVisible();
-
-  await page.waitForTimeout(2000);
+  await expect(toast).toBeVisible();
 });
 
 test("navigate to login page", async ({ page }) => {

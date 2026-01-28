@@ -13,9 +13,8 @@ test("sign in successfully", async ({ page }) => {
     "E-mail enviado com sucesso! Verifique sua caixa de entrada.",
   );
 
-  expect(toast).toBeVisible();
+  await expect(toast).toBeVisible();
 
-  await page.waitForTimeout(2000);
 });
 
 test("sign in with wrong credentials", async ({ page }) => {
@@ -31,9 +30,7 @@ test("sign in with wrong credentials", async ({ page }) => {
     "Ocorreu um erro ao enviar o e-mail. Tente novamente.",
   );
 
-  expect(toast).toBeVisible();
-
-  await page.waitForTimeout(2000);
+  await expect(toast).toBeVisible();
 });
 
 test("navigate to register a new restaurant page", async ({ page }) => {

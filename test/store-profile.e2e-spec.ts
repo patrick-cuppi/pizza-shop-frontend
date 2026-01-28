@@ -21,7 +21,7 @@ test("update profile successfully", async ({ page }) => {
 
   await page.getByRole("button", { name: "Close", exact: true }).click();
 
-  await page.waitForLoadState("networkidle");
-
-  expect(page.getByRole("button", { name: "Pizza Shop 2" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Pizza Shop 2" }),
+  ).toBeVisible();
 });
