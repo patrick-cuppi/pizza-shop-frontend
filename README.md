@@ -1,6 +1,6 @@
 <div align="center">
   <h1>🍕 Pizza Shop Frontend</h1>
-  <p>Sistema de gerenciamento de pedidos e dashboard para pizzarias</p>
+  <p>Order management system and dashboard for pizzerias</p>
   
   [![React](https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -10,81 +10,82 @@
 
 ---
 
-## 📋 Sobre o Projeto
+## 📋 About the Project
 
-O **Pizza Shop Frontend** é uma aplicação web moderna desenvolvida para gerenciamento de pedidos e visualização de métricas de uma pizzaria. O sistema oferece um dashboard completo com gráficos interativos, listagem de pedidos com filtros avançados, autenticação de usuários e perfil de estabelecimento.
+The **Pizza Shop Frontend** is a modern web application designed for order management and metric visualization tailored for pizzerias. The system features a comprehensive dashboard with interactive charts, an order listing interface with advanced filtering, secure user authentication, and establishment profile management.
 
-A aplicação foi desenvolvida incluindo testes unitários e E2E, mock de APIs para desenvolvimento e integração com backend em Bun.
+The application adheres to high development standards, featuring comprehensive unit and end-to-end (E2E) testing, API mocking for local development, and seamless integration with a performant Bun-based backend.
 
-O back-end do projeto está disponível [clicando aqui](https://github.com/patrick-cuppi/pizza-shop-backend).
-
----
-
-## ✨ Funcionalidades
-
-- 🔐 **Autenticação**: Sistema de login e cadastro de restaurantes
-- 📊 **Dashboard**: Visualização de métricas em tempo real
-  - Pedidos do dia
-  - Pedidos do mês
-  - Pedidos cancelados
-  - Receita mensal
-  - Gráfico de receita semanal
-  - Produtos mais populares
-- 📦 **Gerenciamento de Pedidos**
-  - Listagem paginada de pedidos
-  - Filtros por ID, cliente e status
-  - Detalhes completos do pedido
-  - Atualização de status (aprovar, despachar, entregar, cancelar)
-- 👤 **Perfil**: Edição de informações do estabelecimento
-- 🌓 **Tema**: Alternância entre modo claro e escuro
-- 📱 **Responsivo**: Interface adaptada para diferentes dispositivos
+> [!WARNING]
+> **Backend Dependency:** This frontend application requires its companion backend to function fully in production mode. The backend repository is available at [pizza-shop-backend](https://github.com/patrick-cuppi/pizza-shop-backend).
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ✨ Features
+
+- 🔐 **Authentication**: Secure login system and restaurant registration.
+- 📊 **Dashboard**: Real-time metric visualization.
+  - Daily orders
+  - Monthly orders
+  - Canceled orders
+  - Monthly revenue
+  - Weekly revenue chart
+  - Most popular products
+- 📦 **Order Management**
+  - Paginated order listing
+  - Advanced filtering by ID, customer name, and status
+  - Comprehensive order details
+  - Status progression tracking (Approve, Dispatch, Deliver, Cancel)
+- 👤 **Profile**: Establishment information and settings management.
+- 🌓 **Theming**: Seamless toggle between Light and Dark modes.
+- 📱 **Responsive Design**: Interface fully adapted for various devices and screen sizes.
+
+---
+
+## 🛠️ Tech Stack
 
 ### Core
 
-- **[React 18.2](https://react.dev/)** - Biblioteca para construção de interfaces
-- **[TypeScript 5.2](https://www.typescriptlang.org/)** - Superset JavaScript com tipagem estática
-- **[Vite 5.0](https://vitejs.dev/)** - Build tool e dev server ultrarrápido
+- **[React 18.2](https://react.dev/)** - UI library for building component-driven interfaces.
+- **[TypeScript 5.2](https://www.typescriptlang.org/)** - Strongly typed JavaScript superset.
+- **[Vite 5.0](https://vitejs.dev/)** - Next-generation frontend tooling and ultra-fast dev server.
 
-### Roteamento e Estado
+### Routing & State Management
 
-- **[React Router DOM 6.30](https://reactrouter.com/)** - Roteamento declarativo
-- **[TanStack Query 5.90](https://tanstack.com/query)** - Gerenciamento de estado assíncrono
+- **[React Router DOM 6.30](https://reactrouter.com/)** - Declarative routing for React applications.
+- **[TanStack Query 5.90](https://tanstack.com/query)** - Powerful asynchronous state management and data fetching.
 
-### UI e Estilização
+### UI & Styling
 
-- **[Tailwind CSS 3.3](https://tailwindcss.com/)** - Framework CSS utility-first
-- **[Radix UI](https://www.radix-ui.com/)** - Componentes acessíveis e não-estilizados
-- **[Lucide React](https://lucide.dev/)** - Ícones modernos e customizáveis
-- **[Recharts 3.6](https://recharts.org/)** - Biblioteca de gráficos para React
-- **[Sonner](https://sonner.emilkowal.ski/)** - Toast notifications elegantes
+- **[Tailwind CSS 3.3](https://tailwindcss.com/)** - Utility-first CSS framework for rapid UI development.
+- **[Radix UI](https://www.radix-ui.com/)** - Unstyled, accessible UI primitives.
+- **[Lucide React](https://lucide.dev/)** - Beautiful and consistent icon toolkit.
+- **[Recharts 3.6](https://recharts.org/)** - Composable charting library built on React components.
+- **[Sonner](https://sonner.emilkowal.ski/)** - An opinionated toast component for React.
 
-### Formulários e Validação
+### Forms & Validation
 
-- **[React Hook Form 7.68](https://react-hook-form.com/)** - Gerenciamento de formulários performático
-- **[Zod 4.1](https://zod.dev/)** - Schema validation TypeScript-first
+- **[React Hook Form 7.68](https://react-hook-form.com/)** - Performant, flexible, and extensible form handling.
+- **[Zod 4.1](https://zod.dev/)** - TypeScript-first schema validation with static type inference.
 
-### Requisições HTTP
+### HTTP Client & Mocking
 
-- **[Axios 1.13](https://axios-http.com/)** - Cliente HTTP baseado em promises
-- **[MSW 2.12](https://mswjs.io/)** - Mock Service Worker para testes e desenvolvimento
+- **[Axios 1.13](https://axios-http.com/)** - Promise-based HTTP client.
+- **[MSW 2.12](https://mswjs.io/)** - Mock Service Worker for API mocking during testing and local development.
 
-### Testes
+### Testing
 
-- **[Vitest 4.0](https://vitest.dev/)** - Framework de testes unitários ultrarrápido
-- **[Playwright 1.58](https://playwright.dev/)** - Framework para testes E2E
-- **[Testing Library](https://testing-library.com/)** - Utilities para testes de componentes React
+- **[Vitest 4.0](https://vitest.dev/)** - Blazing fast unit test framework powered by Vite.
+- **[Playwright 1.58](https://playwright.dev/)** - Framework for reliable end-to-end testing.
+- **[Testing Library](https://testing-library.com/)** - Simple and complete testing utilities that encourage good testing practices.
 
 ---
 
-## 📊 Arquitetura e Consumo de API
+## 📊 Architecture & API Integration
 
-### Estrutura de Comunicação com API
+### Communication Structure
 
-A aplicação consome uma API REST desenvolvida em **Bun** (runtime JavaScript moderno e performático). A comunicação é estabelecida através do Axios com configurações centralizadas:
+The application consumes a RESTful API built with **Bun** (a fast, modern JavaScript runtime). Network requests are handled by Axios with centralized configurations:
 
 ```typescript
 // src/lib/axios.ts
@@ -93,41 +94,41 @@ import axios from "axios";
 
 export const api = axios.create({
   baseURL: env.VITE_API_URL,
-  withCredentials: true, // Suporte a cookies para autenticação
+  withCredentials: true, // Enable cookie support for authentication
 });
 ```
 
-### Fluxo de Comunicação
+### Request Flow Architecture
 
 ```mermaid
 graph LR
-    A[Componente React] --> B[React Query Hook]
-    B --> C[Função API]
+    A[React Component] --> B[React Query Hook]
+    B --> C[API Function]
     C --> D[Axios Instance]
-    D --> E{Modo de Execução}
-    E -->|Produção| F[API Bun]
-    E -->|Teste| G[MSW Mock]
-    F --> H[Resposta]
+    D --> E{Execution Mode}
+    E -->|Production| F[Bun API]
+    E -->|Test/Mock| G[MSW Mock]
+    F --> H[Response]
     G --> H
     H --> B
     B --> A
     
-    style A fill:#61dafb
-    style F fill:#f4dc00
-    style G fill:#ff6a33
+    style A fill:#61dafb,color:#000
+    style F fill:#f4dc00,color:#000
+    style G fill:#ff6a33,color:#fff
 ```
 
-### Camadas da Aplicação
+### Application Layers
 
-1. **Camada de Apresentação** (`/src/pages`): Componentes React que renderizam a UI
-2. **Camada de Dados** (`/src/api`): Funções que encapsulam chamadas HTTP
-3. **Camada de Cache** (`React Query`): Gerenciamento de cache e sincronização
-4. **Camada de Mock** (`/src/api/mocks`): Interceptação de requests em ambiente de teste
+1. **Presentation Layer** (`/src/pages`): React components responsible for rendering the UI.
+2. **Data Layer** (`/src/api`): Functions that encapsulate HTTP calls.
+3. **Cache Layer** (`React Query`): State management, caching, and background synchronization.
+4. **Mock Layer** (`/src/api/mocks`): Request interception for testing and isolated development environments.
 
-### Exemplo de Fluxo de Requisição
+### Data Fetching Example
 
 ```typescript
-// 1. Definição da função de API
+// 1. API function definition
 export async function getOrders({ pageIndex, orderId, customerName, status }: GetOrdersQuery) {
   const response = await api.get<GetOrdersResponse>("/orders", {
     params: { pageIndex, orderId, customerName, status }
@@ -135,19 +136,19 @@ export async function getOrders({ pageIndex, orderId, customerName, status }: Ge
   return response.data;
 }
 
-// 2. Hook React Query no componente
+// 2. React Query hook inside a component
 const { data: result } = useQuery({
   queryKey: ['orders', filters],
   queryFn: () => getOrders(filters),
 });
 
-// 3. Em modo teste, MSW intercepta e retorna mock
+// 3. MSW intercepts and returns a mock response during tests
 http.get('/orders', () => {
   return HttpResponse.json(mockOrdersData)
 })
 ```
 
-### Variáveis de Ambiente
+### Environment Variables
 
 ```env
 VITE_API_URL=http://localhost:3333
@@ -156,30 +157,30 @@ VITE_ENABLE_API_DELAY=true
 
 ---
 
-## 🧪 Testes
+## 🧪 Testing Strategy
 
-A aplicação possui uma suíte completa de testes cobrindo componentes, páginas e fluxos de usuário.
+The application features a comprehensive test suite covering components, pages, and critical user flows.
 
-### Testes Unitários (Vitest + Testing Library)
+### Unit Tests (Vitest + Testing Library)
 
-**Executar testes:**
+**Run tests:**
 ```bash
 pnpm dev:test
 ```
 
-**Cobertura de código:**
+**View coverage report:**
 ```bash
 pnpm coverage
 ```
 
-**Componentes testados:**
-- `nav-link.spec.tsx` - Links de navegação
-- `order-status.spec.tsx` - Badge de status de pedidos
-- `pagination.spec.tsx` - Componente de paginação
+**Tested Components:**
+- `nav-link.spec.tsx` - Navigation link active state logic
+- `order-status.spec.tsx` - Order status badge rendering
+- `pagination.spec.tsx` - Pagination component controls
 
-**Exemplo de teste unitário:**
+**Unit Test Example:**
 ```typescript
-test('should highlight the nav link when is the current page', () => {
+test('should highlight the nav link when it is the current page', () => {
   render(
     <NavLink to="/orders">Orders</NavLink>,
     { wrapper: MemoryRouter, initialEntries: ['/orders'] }
@@ -189,235 +190,233 @@ test('should highlight the nav link when is the current page', () => {
 })
 ```
 
-### Testes E2E (Playwright)
+### End-to-End Tests (Playwright)
 
-**Executar testes E2E:**
+**Run E2E tests:**
 ```bash
 pnpm playwright test --ui
 ```
 
-**Suítes de teste:**
+**Test Suites:**
 
 1. **Dashboard** (`dashboard.e2e-spec.ts`)
-   - Exibição de métricas do dia
-   - Exibição de métricas do mês
-   - Exibição de pedidos cancelados
-   - Exibição de receita mensal
+   - Validates daily/monthly metric displays.
+   - Validates canceled orders metric.
+   - Validates monthly revenue displays.
 
-2. **Pedidos** (`orders.e2e-spec.ts`)
-   - Listagem de pedidos
-   - Paginação
-   - Filtro por ID do pedido
-   - Filtro por nome do cliente
-   - Filtro por status
+2. **Orders** (`orders.e2e-spec.ts`)
+   - Order listing and pagination.
+   - Filtering by Order ID, Customer Name, and Status.
 
-3. **Autenticação** (`sign-in.e2e-spec.ts` e `sign-up.e2e-spec.ts`)
-   - Login de usuário
-   - Cadastro de restaurante
-   - Validação de formulários
+3. **Authentication** (`sign-in.e2e-spec.ts` & `sign-up.e2e-spec.ts`)
+   - User login flow.
+   - Restaurant registration.
+   - Form validation behavior.
 
-4. **Perfil** (`store-profile.e2e-spec.ts`)
-   - Atualização de informações do estabelecimento
+4. **Profile** (`store-profile.e2e-spec.ts`)
+   - Updating establishment details.
 
 ### Mock Service Worker (MSW)
 
-Para testes e desenvolvimento, a aplicação utiliza MSW para interceptar requisições HTTP e retornar dados mockados:
+For tests and local development without a backend, the application utilizes MSW to intercept HTTP requests and return mocked responses:
 
-- ✅ Ambiente de teste isolado
-- ✅ Desenvolvimento sem dependência do backend
-- ✅ Dados consistentes para testes E2E
-- ✅ 17 endpoints mockados
-
----
-
-## 🎨 Interface
-
-A interface foi desenvolvida com foco em usabilidade e acessibilidade, utilizando:
-
-- **Design System**: Componentes do Radix UI garantem acessibilidade WCAG
-- **Responsividade**: Layout adaptativo com Tailwind CSS
-- **Tema**: Suporte a modo claro e escuro com persistência em localStorage
-- **Feedback Visual**: Toasts, loading states e animações suaves
-- **Gráficos Interativos**: Visualizações de dados com Recharts
-
-### Páginas Principais
-
-| Página | Descrição | Rota |
-|--------|-----------|------|
-| Dashboard | Métricas e gráficos da pizzaria | `/` |
-| Pedidos | Listagem e gerenciamento de pedidos | `/orders` |
-| Login | Autenticação de usuários | `/sign-in` |
-| Cadastro | Registro de novo restaurante | `/sign-up` |
+- ✅ Isolated testing environment.
+- ✅ Backend-independent development capabilities.
+- ✅ Consistent, reliable data for E2E testing.
+- ✅ 17 fully mocked endpoints.
 
 ---
 
-## 🚀 Como Executar
+## 🎨 User Interface
 
-### Pré-requisitos
+The interface was designed with a strong focus on usability and accessibility:
 
-- Node.js 18+
-- pnpm (recomendado) ou npm
-- Backend em Bun rodando na porta 3333
+- **Design System**: Radix UI components ensure WCAG compliance and keyboard accessibility.
+- **Responsiveness**: Fluid, adaptive layouts built with Tailwind CSS.
+- **Theming**: Native support for Light and Dark modes with `localStorage` persistence.
+- **Visual Feedback**: Graceful toast notifications, loading states, and smooth micro-animations.
+- **Interactive Charts**: Responsive data visualization powered by Recharts.
 
-### Instalação
+### Main Routes
+
+| Page | Description | Route |
+|------|-------------|-------|
+| **Dashboard** | Key metrics and interactive charts | `/` |
+| **Orders** | Order listing and management interface | `/orders` |
+| **Sign In** | User authentication | `/sign-in` |
+| **Sign Up** | New restaurant registration | `/sign-up` |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) 18+
+- [pnpm](https://pnpm.io/) (Recommended) or npm
+- **[Pizza Shop Backend](https://github.com/patrick-cuppi/pizza-shop-backend)** running on port `3333` (Required for production mode).
+
+### Installation
 
 ```bash
-# Clonar o repositório
+# Clone the repository
 git clone https://github.com/patrick-cuppi/pizza-shop-frontend
 
-# Entrar no diretório
+# Navigate to the project directory
 cd pizza-shop-frontend
 
-# Instalar dependências
+# Install dependencies
 pnpm install
 ```
 
-### Configuração
+### Configuration
 
-Crie um arquivo `.env` na raiz do projeto:
+Create a `.env` file in the project root:
 
 ```env
 VITE_API_URL=http://localhost:3333
 VITE_ENABLE_API_DELAY=true
 ```
-Para os testes, utilize: `VITE_ENABLE_API_DELAY=false` 
 
-### Executar em Desenvolvimento
+> **Note:** For running tests or completely mocked environments, set `VITE_ENABLE_API_DELAY=false`.
+
+### Running the Development Server
 
 ```bash
-# Modo desenvolvimento normal
+# Standard development mode (requires the Bun backend)
 pnpm dev
 
-# Modo desenvolvimento com mocks (porta 5001)
+# Mocked development mode (runs on port 5001, no backend required)
 pnpm dev:test
 ```
 
-### Build para Produção
+### Building for Production
 
 ```bash
-# Compilar TypeScript e gerar build
+# Type-check and build the application
 pnpm build
 
-# Preview do build de produção
+# Preview the production build locally
 pnpm preview
 ```
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📁 Project Structure
 
-```
+```text
 pizza-shop-frontend/
 ├── src/
-│   ├── api/              # Funções de comunicação com API
-│   │   └── mocks/        # Mocks MSW para testes
-│   ├── components/       # Componentes reutilizáveis
-│   │   ├── theme/        # Gerenciamento de tema
-│   │   └── ui/           # Componentes da UI
-│   ├── lib/              # Configurações de bibliotecas
-│   ├── pages/            # Páginas da aplicação
-│   │   ├── _layouts/     # Layouts compartilhados
-│   │   ├── app/          # Páginas autenticadas
-│   │   └── auth/         # Páginas de autenticação
-│   ├── app.tsx           # Componente raiz
-│   ├── routes.tsx        # Configuração de rotas
-│   └── env.ts            # Validação de variáveis de ambiente
-├── test/                 # Testes E2E (Playwright)
-├── public/               # Arquivos estáticos
-└── playwright.config.ts  # Configuração Playwright
+│   ├── api/              # API communication functions
+│   │   └── mocks/        # MSW mocks for testing
+│   ├── components/       # Reusable UI components
+│   │   ├── theme/        # Theme management logic
+│   │   └── ui/           # Base UI primitives
+│   ├── lib/              # Library configurations (Axios, React Query, etc.)
+│   ├── pages/            # Application views/pages
+│   │   ├── _layouts/     # Shared route layouts
+│   │   ├── app/          # Authenticated pages
+│   │   └── auth/         # Authentication pages
+│   ├── app.tsx           # Root component
+│   ├── routes.tsx        # Routing configuration
+│   └── env.ts            # Environment variable schema validation
+├── test/                 # E2E test suites (Playwright)
+├── public/               # Static public assets
+└── playwright.config.ts  # Playwright configuration
 ```
 
 ---
 
-## 🔄 Diagrama de Fluxo da Aplicação
+## 🔄 Application Flow Diagram
 
 ```mermaid
 flowchart TD
-    Start([Usuário acessa aplicação]) --> CheckAuth{Autenticado?}
+    Start([User Accesses Application]) --> CheckAuth{Is Authenticated?}
     
-    CheckAuth -->|Não| Login[Tela de Login]
-    CheckAuth -->|Sim| Dashboard[Dashboard]
+    CheckAuth -->|No| Login[Login Screen]
+    CheckAuth -->|Yes| Dashboard[Dashboard]
     
     Login --> SignIn[Sign In]
     Login --> SignUp[Sign Up]
     
-    SignIn --> Auth[Autenticação via API]
-    SignUp --> Register[Registro via API]
+    SignIn --> Auth[Authenticate via API]
+    SignUp --> Register[Register via API]
     
     Auth --> Dashboard
     Register --> Dashboard
     
-    Dashboard --> Metrics[Métricas]
-    Dashboard --> Charts[Gráficos]
-    Dashboard --> NavOrders[Navegar para Pedidos]
+    Dashboard --> Metrics[View Metrics]
+    Dashboard --> Charts[View Charts]
+    Dashboard --> NavOrders[Navigate to Orders]
     
-    NavOrders --> Orders[Lista de Pedidos]
+    NavOrders --> Orders[Order List]
     
-    Orders --> Filter[Aplicar Filtros]
-    Orders --> Pagination[Paginação]
-    Orders --> ViewDetails[Ver Detalhes]
+    Orders --> Filter[Apply Filters]
+    Orders --> Pagination[Change Page]
+    Orders --> ViewDetails[View Order Details]
     
-    Filter --> Query[Requisição à API]
+    Filter --> Query[API Request]
     Pagination --> Query
     
-    Query --> MSW{Modo Teste?}
-    MSW -->|Sim| MockData[Dados Mockados]
-    MSW -->|Não| BunAPI[API Bun]
+    Query --> MSW{Test Mode?}
+    MSW -->|Yes| MockData[Mocked Data]
+    MSW -->|No| BunAPI[Bun Backend API]
     
-    MockData --> Display[Exibir Resultados]
+    MockData --> Display[Display Results]
     BunAPI --> Display
     
-    ViewDetails --> OrderDetails[Detalhes do Pedido]
-    OrderDetails --> Actions[Ações]
+    ViewDetails --> OrderDetails[Order Details Modal]
+    OrderDetails --> Actions[Manage Status]
     
-    Actions --> Approve[Aprovar]
-    Actions --> Dispatch[Despachar]
-    Actions --> Deliver[Entregar]
-    Actions --> Cancel[Cancelar]
+    Actions --> Approve[Approve]
+    Actions --> Dispatch[Dispatch]
+    Actions --> Deliver[Deliver]
+    Actions --> Cancel[Cancel]
     
-    Approve --> UpdateAPI[Atualizar via API]
+    Approve --> UpdateAPI[Update via API]
     Dispatch --> UpdateAPI
     Deliver --> UpdateAPI
     Cancel --> UpdateAPI
     
-    UpdateAPI --> ReactQuery[React Query Cache]
-    ReactQuery --> Refetch[Atualizar Lista]
+    UpdateAPI --> ReactQuery[Invalidate React Query Cache]
+    ReactQuery --> Refetch[Refetch Order List]
     Refetch --> Orders
     
-    Dashboard --> Profile[Perfil]
-    Profile --> EditProfile[Editar Perfil]
-    EditProfile --> SaveProfile[Salvar via API]
+    Dashboard --> Profile[Profile Settings]
+    Profile --> EditProfile[Edit Information]
+    EditProfile --> SaveProfile[Save via API]
     SaveProfile --> Dashboard
     
-    Dashboard --> Logout[Sair]
+    Dashboard --> Logout[Log Out]
     Logout --> Login
     
-    style Dashboard fill:#61dafb
-    style BunAPI fill:#f4dc00
-    style MockData fill:#ff6a33
-    style ReactQuery fill:#00d8ff
+    style Dashboard fill:#61dafb,color:#000
+    style BunAPI fill:#f4dc00,color:#000
+    style MockData fill:#ff6a33,color:#fff
+    style ReactQuery fill:#00d8ff,color:#000
 ```
 
 ---
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+Contributions are highly appreciated! Feel free to submit issues and pull requests.
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/patrick-cuppi/pizza-shop-frontend/blob/main/LICENSE) para mais detalhes.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/patrick-cuppi/pizza-shop-frontend/blob/main/LICENSE) file for more details.
 
 ---
 
 <div align="center">
-  <p>Feito com React, TypeScript e Bun 🚀</p>
+  <p>Built with React, TypeScript, and Bun 🚀</p>
 </div>
